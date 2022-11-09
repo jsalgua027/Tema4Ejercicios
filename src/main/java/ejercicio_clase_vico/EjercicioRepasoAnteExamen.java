@@ -137,8 +137,7 @@ public class EjercicioRepasoAnteExamen {
         
      
         //constantes para obtener descueno
-        final double PORCENTAJE_DESCUENTO_BOLA_AZULl = 0.2;
-        final double PORCENTAJE_DESCUENTO_BOLA_ROJA = 0.25;
+      
         final int RANGO_MINIMO=1;
         final int RANGO_MAXIMO=4;
         final int RANGO_MAXIMO_SIN_VERDE=3;
