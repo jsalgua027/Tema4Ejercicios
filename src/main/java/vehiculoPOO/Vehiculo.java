@@ -33,13 +33,25 @@ package vehiculoPOO;
         * definicion, 
         * atributos metodos
         ¿Qué ventajas aporta la POO?
+                Modularidad. El código de una clase se puede mantener y reescribir sin tener que tocar el código de otras clases.
+                Reutilización de código. Podemos hacer uso de clases y objetos diseñados por terceras personas sin saber el código que contienen, haciendo uso de su interfaz.
+                Ocultación de información. En la POO debemos ocultar los atributos de los objetos y acceder a ellos a través de sus métodos.
+
         ¿Cuáles son las partes de una clase?
+                Declaracion y Definición
         ¿Qué elementos componen la definición de una clase? Explica brevemente cada uno
+                Todo lo que este entre las llaves egipcias de inicio a fin { }, normalmente están los
+                 métodos y los atributos
         ¿Qué es un método constructor?
+                Es un método que nos sirve para construir los objetos de la clase
         ¿Qué son los métodos de consulta o getters?
+            Son aquellos que nos ayudan a consultar los estados del objeto (Atributos)
         ¿Qué son los métodos modificadores o setters?
+            Son aquellos que nos sivern para modificar los atributos del objeto creado
         ¿En qué consiste la instanciación de un objeto? ¿Para qué sirve el operador ‘new’?
+            En reservar espacio de memoria para el objeto, para ello se usa el operador new (creas el objeto)
         ¿Cuál es la función del método main()? ¿Cómo se declara el método main()?
+            Sirve para ejecutar ejecutar un programa Java. la declaracion es: public static void main(String args[])
         ¿Cómo interaccionan los objetos de una aplicación?
 
      * 
