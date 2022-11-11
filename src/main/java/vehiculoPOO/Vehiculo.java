@@ -51,9 +51,16 @@ package vehiculoPOO;
         ¿En qué consiste la instanciación de un objeto? ¿Para qué sirve el operador ‘new’?
             En reservar espacio de memoria para el objeto, para ello se usa el operador new (creas el objeto)
         ¿Cuál es la función del método main()? ¿Cómo se declara el método main()?
-            Sirve para ejecutar ejecutar un programa Java. la declaracion es: public static void main(String args[])
+            Sirve para ejecutar ejecutar un programa Java. la declaracion es: 
+                public static void main(String args[ ]){
+                    }
         ¿Cómo interaccionan los objetos de una aplicación?
 
+           ¿Qué pasa si objeto se declara pero no se instancia?
+            Que no hay espacio de memoria reservado para el 
+            
+            ¿Para qué se utiliza el puntero ‘this’?
+            Para referirse a las variables de instancia de la clase
      * 
      * 
      * 

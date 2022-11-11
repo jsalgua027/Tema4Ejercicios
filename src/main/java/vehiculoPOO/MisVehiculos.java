@@ -42,6 +42,18 @@ public class MisVehiculos {
         System.out.println("El color del mercedes es: "+ mercedes.getColor());
         
         System.out.println(mercedes.toString());
+        
+        
+        
+        System.out.println("******Ejercicio 11 voy a crear un alias***********");
+        
+        Vehiculo mercedes2;
+        
+            mercedes2=mercedes; // ferrari 2  es un alias de ferrari ( en otro nombre hago referencia al objeto)
+            System.out.println("Imprimo mercedes 2 para ver los atributos");
+            System.out.println(mercedes2.toString());
+        
+        
     }
     
 }
