@@ -79,7 +79,7 @@ package vehiculoPOO;
                 public static void main(String args[ ]){
                     }
         ¿Cómo interaccionan los objetos de una aplicación?
-
+            Enviandose mensajes a traves de los metodos
            ¿Qué pasa si objeto se declara pero no se instancia?
             Que no hay espacio de memoria reservado para el 
             

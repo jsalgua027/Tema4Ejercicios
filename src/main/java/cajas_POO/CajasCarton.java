@@ -60,7 +60,7 @@ public class CajasCarton {
     public void setPeso(double peso) {
         this.peso = peso;
     }
-
+//metodo sobreescrito que  es heredado de otra clase  y llamandose igual pero realiza otro comportamiento
     @Override
     public String toString() {
         return "CajasCarton{" + "ancho=" + ancho +" mm "+ ", alto=" + alto +" mm "
