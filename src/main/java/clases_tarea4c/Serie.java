@@ -10,32 +10,29 @@ import serie.*;
  *
  * @author nacho
  */
-
-
 // declaracion de la clase: publica llamada serie
 public class Serie {
 
     /**
      * @param args the command line arguments
-     * 
-     * 
-     * Titulo, (Genero : accion , comedia, scifi, drama)
-     * , sipnosis, numero de  temporadas, productor
-     * 
-     * 
-     * 
-     * 
-     * 
+     *
+     *
+     * Titulo, (Genero : accion , comedia, scifi, drama) , sipnosis, numero de
+     * temporadas, productor
+     *
+     *
+     *
+     *
+     *
      */
-     // Atributos  de clase son los static 
-    
+    // Atributos  de clase son los static 
     // los atributos de instacia los no static
-   private String titulo;
-   private String genero;
-   private String sipnosis;
-   private String productor;
-   private int numeroTemporadas;
-   private int numeroLikes;
+    private String titulo;
+    private String genero;
+    private String sipnosis;
+    private String productor;
+    private int numeroTemporadas;
+    private int numeroLikes;
 
     public Serie() {
         // los atributos quedan inicializados con valores por defecto
@@ -44,6 +41,7 @@ public class Serie {
         // boolean a false
     }
 // sin likes
+
     public Serie(String titulo, String genero, String sipnosis, String productor, int numeroTemporadas) {
         this.titulo = titulo;
         this.genero = genero;
@@ -51,7 +49,8 @@ public class Serie {
         this.productor = productor;
         this.numeroTemporadas = numeroTemporadas;
     }
- // con likes
+    // con likes
+
     public Serie(String titulo, String genero, String sipnosis, String productor, int numeroTemporadas, int numeroLikes) {
         this.titulo = titulo;
         this.genero = genero;
@@ -60,8 +59,6 @@ public class Serie {
         this.numeroTemporadas = numeroTemporadas;
         this.numeroLikes = numeroLikes;
     }
-    
-    
 
     public int getNumeroTemporadas() {
         return numeroTemporadas;
@@ -102,14 +99,11 @@ public class Serie {
     public void setProductor(String productor) {
         this.productor = productor;
     }
-    
-    
-    
 
     @Override
     public String toString() {
         return "Serie{" + "titulo=" + titulo + ", genero=" + genero + ", sipnosis="
-                + sipnosis + ", productor=" + productor + ", numeroTemporadas=" 
+                + sipnosis + ", productor=" + productor + ", numeroTemporadas="
                 + numeroTemporadas + ", numeroLikes=" + numeroLikes + '}';
     }
 
@@ -121,12 +115,10 @@ public class Serie {
         this.numeroLikes = numeroLikes;
     }
 
-    
-  public void darlike(){
-  this.numeroLikes++;
-  
-  }
-  
-  
-    
+    public void darlike() {
+        this.numeroLikes++;
+
+    }
+
+   
 }
