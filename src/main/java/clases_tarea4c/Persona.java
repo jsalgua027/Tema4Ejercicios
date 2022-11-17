@@ -19,7 +19,7 @@ public class Persona {
     private int edad;
     private final String NIF = generarNIF();
     private char sexo; // H gombre , M mujer , O otros
-    private float peso;
+    private double peso;
     private double altura;
 
     // constructor por defectos 
@@ -27,7 +27,7 @@ public class Persona {
     }
 
     // constructor parametrizado
-    public Persona(String nombre, int edad, char sexo, float peso, double altura) {
+    public Persona(String nombre, int edad, char sexo, double peso, double altura) {
         this.nombre = nombre;
         this.edad = edad;
         if (!filtrarSexo(sexo)) {
@@ -58,7 +58,7 @@ public class Persona {
         return sexo;
     }
 
-    public float getPeso() {
+    public double getPeso() {
         return peso;
     }
 
@@ -136,7 +136,7 @@ public class Persona {
         float inidiceMasaC = 0;
         // double indiceDouble = this.peso / Math.pow(this.altura, 2); esta opcion es si peso es double
         //   inidiceMasaC = (float) indiceDouble;
-        inidiceMasaC = this.peso / (float) Math.pow(this.altura, 2);
+        inidiceMasaC = (float)(this.peso / Math.pow(this.altura, 2));
         return inidiceMasaC;
 
     }

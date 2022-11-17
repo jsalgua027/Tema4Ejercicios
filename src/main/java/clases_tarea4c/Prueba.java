@@ -14,17 +14,17 @@ public class Prueba {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-  //   Persona persona1  =   ServicioPersona.pedirPersona();
+    
+    Persona persona1  =   ServicioPersona.pedirPersona();
   
     boolean esMayorEdad;
     float indiceMasa;
         
-        Persona persona2=new Persona("juan ", 23, 'H', 80f, 1.75);
+        Persona persona2=new Persona("juan ", 23, 'H', 80, 1.75);
         Serie juegoTronos =new Serie("Juego de Tronos", "fantasia", "JJJJJJJJJJJJJ", "HBO", 5, 100);
         
         System.out.println("**************************Muestro persona 1*************");
-     //   System.out.println(persona1);
+        System.out.println(persona1);
         System.out.println("**************************Muestro persona 2**************");
         
         System.out.println(persona2);
