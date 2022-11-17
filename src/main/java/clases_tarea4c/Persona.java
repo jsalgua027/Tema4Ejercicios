@@ -14,7 +14,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 public class Persona {
 
     private static Random numAleaorio = new Random();
-    private String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+    private  final String LETRAS = "TRWAGMYFPDXBNJZSQVHLCKE";
     private String nombre;
     private int edad;
     private final String NIF = generarNIF();
@@ -113,7 +113,7 @@ public class Persona {
         int numerosInt = Integer.parseInt(numeroString);
         int posicion = numerosInt % 23;
 
-        return numeroString + letras.charAt(posicion);
+        return numeroString + LETRAS.charAt(posicion);
 
     }
     //si es mayor de edad devuleve true
@@ -124,6 +124,7 @@ public class Persona {
 
     }
 //calculo el indice de masa corporal
+
     public float calcularIMC() {
 
         return (float) (this.peso / Math.pow(this.altura, 2));
