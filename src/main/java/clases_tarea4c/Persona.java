@@ -100,44 +100,33 @@ public class Persona {
     }
 
     // Métodos solicitados
-    // filtro sexo
+    // filtro sexo, da true si son esos chars
     private boolean filtrarSexo(char sexo) {
-        boolean siEs = true;
-        if (Character.compare(sexo, 'M') == 0 || (Character.compare(sexo, 'H')) == 0 || (Character.compare(sexo, 'O')) == 0) {
-            return siEs = true;
 
-        }
-        return siEs = false;
-
+        return (sexo == 'M' || sexo == 'H' || sexo == 'O');
     }
 
     //generar NIF 
     private String generarNIF() {
-        String resultado = "";
+
         String numeroString = RandomStringUtils.randomNumeric(8);
         int numerosInt = Integer.parseInt(numeroString);
         int posicion = numerosInt % 23;
-        resultado = numeroString + letras.charAt(posicion);
-        return resultado;
+
+        return numeroString + letras.charAt(posicion);
 
     }
     //si es mayor de edad devuleve true
 
     public boolean esMayorEdad() {
 
-        if (this.edad >= 18) {
-            return true;
-        }
-        return false;
+        return this.edad >= 18;
 
     }
-
+//calculo el indice de masa corporal
     public float calcularIMC() {
-        float inidiceMasaC = 0;
-        // double indiceDouble = this.peso / Math.pow(this.altura, 2); esta opcion es si peso es double
-        //   inidiceMasaC = (float) indiceDouble;
-        inidiceMasaC = (float)(this.peso / Math.pow(this.altura, 2));
-        return inidiceMasaC;
+
+        return (float) (this.peso / Math.pow(this.altura, 2));
 
     }
 
@@ -159,16 +148,11 @@ public class Persona {
         }
 
     }
-    
-    
-      //metodo dar like a serie que recibe la serie por parametros
-     public  void darlikeSerie(Serie serie) {
-       serie.darlike();
-        
-     
+
+    //metodo dar like a serie que recibe la serie por parametros
+    public void darlikeSerie(Serie serie) {
+        serie.darlike();
 
     }
-    
-    
 
 }
