@@ -109,7 +109,7 @@ public class Vehiculo {
         this.modelo = model;
         this.color = col;
         this.tarifa = tarif;
-        this.disponible = dispon;
+        this.disponible = false;
     }
 
     public Vehiculo() {
@@ -125,6 +125,13 @@ public class Vehiculo {
    
   
     }
+    
+    public static  Vehiculo copia(Vehiculo aux){
+    Vehiculo copia = new Vehiculo();
+    copia = aux;
+    return copia;
+    }
+    
 
     //Metodos getter
     
