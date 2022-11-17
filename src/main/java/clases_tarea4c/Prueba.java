@@ -25,6 +25,7 @@ public class Prueba {
         
         System.out.println("**************************Muestro persona 1*************");
         System.out.println(persona1);
+        System.out.println("");
         System.out.println("**************************Muestro persona 2**************");
         
         System.out.println(persona2);
