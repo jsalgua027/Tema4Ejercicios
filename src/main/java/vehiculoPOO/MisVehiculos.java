@@ -62,9 +62,10 @@ public class MisVehiculos {
 
         Vehiculo nuevo;// genero un nuevo objeto para usar el metodo copia
         System.out.println("Uso el metodo copia y lo imprimo");
-        nuevo = Vehiculo.copia(mercedes2);
-        System.out.println(nuevo);
-
+//       // nuevo = Vehiculo.copia(mercedes2);
+//        System.out.println(nuevo);
+//        mercedes2.setColor("verde");
+//        System.out.println(nuevo);
     }
 
 }

@@ -7,15 +7,15 @@ package vehiculoPOO;
 /**
  *
  * @author nacho
- * 
- * 
- * 
- * 
- * 
- * 
- * 
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  */
-  /*
+/*
      * @param args the command line arguments
      * 
      * 
@@ -86,22 +86,23 @@ package vehiculoPOO;
             ¿Para qué se utiliza el puntero ‘this’?
             Para referirse a las variables de instancia de la clase
      * 
-     * 
-     * 
-     */
+     * ¿En qué consiste pasar valores a un método por valor? ¿y por referencia?
+
+     * los valores primitivos se pasan por valor y los objetos se pasan por referencia
+ */
 //definicion de la clase vehiclu
 public class Vehiculo {
 // atributos
-    private String matricula ;
+
+    private String matricula;
     private String bastidor;
     private String marca;
     private String modelo;
     private String color;
     private double tarifa;//precio día
     private boolean disponible;// Alquilado o libre
-    
-    //Constructores
 
+    //Constructores
     public Vehiculo(String matri, String basti, String mar, String model, String col, double tarif, boolean dispon) {
         this.matricula = matri;
         this.bastidor = basti;
@@ -114,27 +115,42 @@ public class Vehiculo {
 
     public Vehiculo() {
     }
-    
-    //constructor con tres parametros 
-    public Vehiculo (String matricula, String bastidor, String marca){
-    this.matricula=matricula;
-    this.bastidor=bastidor;
-    this.marca=marca;
-    
-    // el resto de atributos se quedan  null objetos, o para numeros, false booleanos
-   
-  
-    }
-    
-    public static  Vehiculo copia(Vehiculo aux){
-    Vehiculo copia = new Vehiculo();
-    copia = aux;
-    return copia;
-    }
-    
 
-    //Metodos getter
+    //constructor con tres parametros 
+    public Vehiculo(String matricula, String bastidor, String marca) {
+        this.matricula = matricula;
+        this.bastidor = bastidor;
+        this.marca = marca;
+
+        // el resto de atributos se quedan  null objetos, o para numeros, false booleanos
+    }
+
     
+    // constructor copia !!!!!!!!!!!!!!!!!!!!
+    
+    public Vehiculo(Vehiculo aux) {
+
+        this.matricula = aux.getMatricula();
+        this.marca = aux.getMarca();
+        this.modelo = aux.getModelo();
+        this.color = aux.getColor();
+        this.tarifa = aux.getTarifa();
+
+    }
+
+    // metodo ojo creas alias!!!!!!!!!!!!!!!!!!!!!!!!!!
+    public static Vehiculo alias(Vehiculo aux) {
+        Vehiculo copia = new Vehiculo();
+        copia = aux;
+        return copia;
+    }
+
+//    public static Vehiculo copia(Vehiculo){
+//    
+//    
+//    }
+    
+    //Metodos getter
     public String getMatricula() {
         return matricula;
     }
@@ -171,6 +187,7 @@ public class Vehiculo {
         return color;
     }
 // metodos setter
+
     public void setColor(String color) {
         this.color = color;
     }
@@ -193,12 +210,9 @@ public class Vehiculo {
 
     @Override
     public String toString() {
-        return "Vehiculo{" + "matricula=" + matricula + ", bastidor=" + bastidor + 
-                ", marca=" + marca + ", modelo=" + modelo + ", color=" + color + 
-                ", tarifa=" + tarifa + ", disponible=" + disponible + '}';
+        return "Vehiculo{" + "matricula=" + matricula + ", bastidor=" + bastidor
+                + ", marca=" + marca + ", modelo=" + modelo + ", color=" + color
+                + ", tarifa=" + tarifa + ", disponible=" + disponible + '}';
     }
 
-    
-    
-    
 }
