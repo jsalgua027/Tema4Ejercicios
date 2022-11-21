@@ -15,24 +15,23 @@ public class Prueba {
      */
     public static void main(String[] args) {
         boolean comprobarSaldo;
-       Cuenta pepe = new Cuenta("7586488N", "Pepe", 5000, 0.5);
-       
+        Cuenta pepe = new Cuenta("7586488N", "Pepe", 5000, 0.5);
+
         System.out.println(pepe);
-        
+
         CalculosCuenta.ingresarDinero(pepe, 2500);
         System.out.println("Miro los ingresos");
-        System.out.println(pepe);       
+        System.out.println(pepe);
         System.out.println("retiro mas de lo que tienen en cuenta:");
-        
-        comprobarSaldo=CalculosCuenta.retirarDinero(pepe, 100000);
+
+        comprobarSaldo = CalculosCuenta.retirarDinero(pepe, 100000);
         System.out.println("retiro la cantidad correcta ");
-         comprobarSaldo= CalculosCuenta.retirarDinero(pepe, 3000);
+        comprobarSaldo = CalculosCuenta.retirarDinero(pepe, 3000);
         System.out.println(pepe);
         System.out.println("genero los intereses ");
         CalculosCuenta.ingresarIntereses(pepe);
         System.out.println(pepe);
-        
-        
+
     }
-    
+
 }
