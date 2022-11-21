@@ -10,13 +10,9 @@ import java.time.LocalDate;
  *
  * @author nacho
  */
-
-
-
-
 public class Animal {
-    
-    private  LocalDate fechaNacimiento;
+
+    private LocalDate fechaNacimiento;
     private String nombre;
     private String tipoAnima;
     private double peso;
@@ -38,7 +34,7 @@ public class Animal {
     }
 
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+        this.fechaNacimiento =fechaNacimiento;
     }
 
     public String getNombre() {
@@ -75,33 +71,71 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" + "fechaNacimiento=" + fechaNacimiento + 
-                ", nombre=" + nombre + ", tipoAnima=" + tipoAnima +
-                ", peso=" + peso + ", estado=" + estado + '}';
+        return "Animal{" + "fechaNacimiento=" + fechaNacimiento
+                + ", nombre=" + nombre + ", tipoAnima=" + tipoAnima
+                + ", peso=" + peso + ", estado=" + estado + '}';
     }
-    
-    
-    public void comer (double cantidadGramos){
-           double  aux= Math.abs(cantidadGramos);
-        this.peso= this.getPeso()+aux;
-    
-    
+
+    public void comer(double cantidadGramos) {
+        double aux = Math.abs(cantidadGramos);
+        this.peso = this.getPeso() + aux;
+
     }
-    
-    
-    public void dormir(){
-    this.estado="Dormido";
-    
+
+    public void dormir() {
+        this.estado = "Dormido";
+
     }
-    
-     public void despertar(){
-    this.estado="Despierto";
-    
+
+    public void despertar() {
+        this.estado = "Despierto";
+
     }
-     public void descansar(){
-    this.estado="Descansar";
-    
+
+    public void descansar() {
+        this.estado = "Descansar";
+
     }
-     
-     
+    //metodo jugar
+
+    public void jugar(int cantidadMinutos) throws IllegalArgumentException {
+        int minutos = Math.abs(cantidadMinutos);
+        int cantidadGramosPerdidos = 0;
+        if (minutos > 180) {
+            System.out.println("El animal no puede jugar tantos minutos");
+            throw new IllegalArgumentException();
+        } else {
+            if (cantidadMinutos % 30 == 0) {
+                cantidadGramosPerdidos = (cantidadMinutos % 30) * 20;
+                this.peso = this.peso - cantidadGramosPerdidos;
+            } else if (cantidadMinutos % 20 == 0) {
+                cantidadGramosPerdidos = (cantidadMinutos % 20) * 10;
+                this.peso = this.peso - cantidadGramosPerdidos;
+            }
+        }
+
+    }
+
+    // metodo clonar 
+    public Animal clonar(Animal pet) {
+
+        Animal aux = new Animal();
+
+        try {
+            aux.setEstado(pet.getEstado());
+            aux.setFechaNacimiento(pet.getFechaNacimiento());
+            aux.setNombre(pet.getNombre());
+            aux.setPeso(pet.getPeso());
+            aux.setTipoAnima(pet.getTipoAnima());
+
+            return aux;
+        } catch (NullPointerException npe) {
+            System.out.println("No puede haber nada a nulo");
+
+        }
+
+        return aux;
+
+    }
+
 }
