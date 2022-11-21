@@ -4,6 +4,8 @@
  */
 package vehiculoPOO;
 
+import java.util.Vector;
+
 /**
  *
  * @author nacho
@@ -145,10 +147,17 @@ public class Vehiculo {
         return copia;
     }
 
-//    public static Vehiculo copia(Vehiculo){
-//    
-//    
-//    }
+    // metodo copia !!!!!!!!!!!!!!!!!!!!
+    public static Vehiculo copia(Vehiculo v1){
+        Vehiculo aux = new Vehiculo();
+                aux.setBastidor(v1.getBastidor());
+                aux.setColor(v1.getColor());
+                aux.setMarca(v1.getMarca());
+                aux.setMatricula(v1.getMatricula());
+                aux.setModelo(v1.getModelo());
+                aux.setTarifa(v1.getTarifa());
+                return aux;
+    }
     
     //Metodos getter
     public String getMatricula() {

@@ -14,7 +14,7 @@ public class Prueba {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        boolean comprobarSaldo;
        Cuenta pepe = new Cuenta("7586488N", "Pepe", 5000, 0.5);
        
         System.out.println(pepe);
@@ -23,9 +23,10 @@ public class Prueba {
         System.out.println("Miro los ingresos");
         System.out.println(pepe);       
         System.out.println("retiro mas de lo que tienen en cuenta:");
-        CalculosCuenta.retirarDinero(pepe, 100000);
+        
+        comprobarSaldo=CalculosCuenta.retirarDinero(pepe, 100000);
         System.out.println("retiro la cantidad correcta ");
-        CalculosCuenta.retirarDinero(pepe, 3000);
+         comprobarSaldo= CalculosCuenta.retirarDinero(pepe, 3000);
         System.out.println(pepe);
         System.out.println("genero los intereses ");
         CalculosCuenta.ingresarIntereses(pepe);

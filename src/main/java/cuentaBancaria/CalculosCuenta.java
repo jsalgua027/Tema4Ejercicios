@@ -34,13 +34,14 @@ public class CalculosCuenta {
         
     }
     
-    public static void retirarDinero(Cuenta cuenta, double cantidad){
+    public static boolean retirarDinero(Cuenta cuenta, double cantidad){
           cantidad=Math.abs(cantidad);
         if(cantidad>cuenta.getSaldoActual()){
             System.out.println("No se puede retirar ese importe, estas tieso");
-        
+         return false;
         } else{
             cuenta.setSaldoActual(cuenta.getSaldoActual()-cantidad);
+            return true;
         }
     
     }

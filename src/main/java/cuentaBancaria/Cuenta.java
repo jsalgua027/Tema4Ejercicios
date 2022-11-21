@@ -34,17 +34,18 @@ import org.apache.commons.lang3.RandomStringUtils;
  */
 public class Cuenta {
 
-    private String numeroCuenta;
+    private final String NUMEROCUENTA;
     private String NifCliente;
     private String nombreCliente;
     private double saldoActual;
     private double intereses;
 
     public Cuenta() {
+         this.NUMEROCUENTA = RandomStringUtils.randomAlphanumeric(20);
     }
 
     public Cuenta(String NifCliente, String nombreCliente, double saldoActual, double intereses) {
-        this.numeroCuenta = RandomStringUtils.randomAlphanumeric(20);
+        this.NUMEROCUENTA = RandomStringUtils.randomAlphanumeric(20);
         this.NifCliente = NifCliente;
         this.nombreCliente = nombreCliente;
         this.saldoActual = saldoActual;
@@ -56,7 +57,7 @@ public class Cuenta {
     }
 
     public String getNumeroCuenta() {
-        return numeroCuenta;
+        return NUMEROCUENTA;
     }
 
     public String getNifCliente() {
@@ -97,7 +98,7 @@ public class Cuenta {
 
     @Override
     public String toString() {
-        return "Cuenta{" + "numeroCuenta=" + numeroCuenta + ", NifCliente=" + NifCliente +
+        return "Cuenta{" + "numeroCuenta=" + NUMEROCUENTA + ", NifCliente=" + NifCliente +
                 ", nombreCliente=" + nombreCliente + ", saldoActual=" + saldoActual +
                 ", intereses=" + intereses + '}';
     }
