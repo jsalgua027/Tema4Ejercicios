@@ -29,7 +29,13 @@ public class Prueba {
         System.out.println(a1);
         System.out.println("Imprimo Animal 2******************************");
         System.out.println(a2);
-   
+        p1.llamar(a1);
+        p1.llamar(a2);
+        System.out.println("He llamado a los dos animales compruebo estado");
+        System.out.println("El estado del animal a1: "+ a1.getEstado());
+        System.out.println("El estado del animal a2: "+ a2.getEstado());
+        
+        
         Animal a3 = new Animal();
         
         a3.clonar(a2);

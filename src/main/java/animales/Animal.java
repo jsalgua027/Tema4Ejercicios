@@ -120,19 +120,20 @@ public class Animal {
     // metodo clonar 
     public Animal clonar(Animal pet) {
 
-        Animal aux = new Animal();
+        Animal aux = new Animal(pet.fechaNacimiento, pet.nombre,
+                 pet.tipoAnima, pet.peso, pet.estado);
 
-        try {
-            aux.setEstado(pet.getEstado());
-            aux.setFechaNacimiento(pet.getFechaNacimiento());
-            aux.setNombre(pet.getNombre());
-            aux.setPeso(pet.getPeso());
-            aux.setTipoAnima(pet.getTipoAnima());
-
-        } catch (NullPointerException npe) {
-            System.out.println("No puede haber nada a nulo");
-
-        }
+//        try {
+//            aux.setEstado(pet.getEstado());
+//            aux.setFechaNacimiento(pet.getFechaNacimiento());
+//            aux.setNombre(pet.getNombre());
+//            aux.setPeso(pet.getPeso());
+//            aux.setTipoAnima(pet.getTipoAnima());
+//
+//        } catch (NullPointerException npe) {
+//            System.out.println("No puede haber nada a nulo");
+//
+//        }
 
         return aux;
 
