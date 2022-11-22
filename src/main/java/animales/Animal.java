@@ -34,7 +34,7 @@ public class Animal {
     }
 
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
-        this.fechaNacimiento =fechaNacimiento;
+        this.fechaNacimiento = fechaNacimiento;
     }
 
     public String getNombre() {
@@ -98,21 +98,22 @@ public class Animal {
     }
     //metodo jugar
 
-    public void jugar(int cantidadMinutos) throws IllegalArgumentException {
+    public void jugar(int cantidadMinutos)  {
         int minutos = Math.abs(cantidadMinutos);
         int cantidadGramosPerdidos = 0;
-        if (minutos > 180) {
-            System.out.println("El animal no puede jugar tantos minutos");
-            throw new IllegalArgumentException();
-        } else {
-            if (cantidadMinutos % 30 == 0) {
-                cantidadGramosPerdidos = (cantidadMinutos % 30) * 20;
-                this.peso = this.peso - cantidadGramosPerdidos;
-            } else if (cantidadMinutos % 20 == 0) {
-                cantidadGramosPerdidos = (cantidadMinutos % 20) * 10;
-                this.peso = this.peso - cantidadGramosPerdidos;
-            }
-        }
+      if (minutos<30){
+      this.peso=this.peso-10;
+            
+            } if (minutos>180){
+            
+                throw new IllegalArgumentException("No puede jugar mas de 180 minutos");
+                
+            
+            }else if (minutos>30&& minutos<=180){
+    
+            this.peso=this.peso-((minutos/30)*20);
+    }
+                
 
     }
 
@@ -128,7 +129,6 @@ public class Animal {
             aux.setPeso(pet.getPeso());
             aux.setTipoAnima(pet.getTipoAnima());
 
-            return aux;
         } catch (NullPointerException npe) {
             System.out.println("No puede haber nada a nulo");
 
