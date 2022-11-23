@@ -98,27 +98,26 @@ public class Animal {
     }
     //metodo jugar
 
-    public void jugar(int cantidadMinutos)  {
+    public void jugar(int cantidadMinutos) {
         int minutos = Math.abs(cantidadMinutos);
         int cantidadGramosPerdidos = 0;
-      if (minutos<30){
-      this.peso=this.peso-10;
-            
-            } if (minutos>180){
-            
-                throw new IllegalArgumentException("No puede jugar mas de 180 minutos");
-                
-            
-            }else if (minutos>30&& minutos<=180){
-    
-            this.peso=this.peso-((minutos/30)*20);
-    }
-                
+        if (minutos < 30) {
+            this.peso = this.peso - 10;
+
+        }
+        if (minutos > 180) {
+
+            throw new IllegalArgumentException("No puede jugar mas de 180 minutos");
+
+        } else if (minutos > 30 && minutos <= 180) {
+
+            this.peso = this.peso - ((minutos / 30) * 20);
+        }
 
     }
 
     // metodo clonar 
-    public static  Animal clonar(Animal pet) {
+    public static Animal clonar(Animal pet) {
 
         Animal aux = new Animal();
 
@@ -136,6 +135,22 @@ public class Animal {
 
         return aux;
 
+    }
+    // version 2 del metodo clonar con otra forma de controlar nullPointer
+
+    public static Animal clonar2(Animal pet) {
+        Animal aux = new Animal();
+        if (pet != null) {
+            aux.setEstado(pet.getEstado());
+            aux.setFechaNacimiento(pet.getFechaNacimiento());
+            aux.setNombre(pet.getNombre());
+            aux.setPeso(pet.getPeso());
+            aux.setTipoAnima(pet.getTipoAnima());
+
+        } else {
+            aux = new Animal();
+        }
+        return aux;
     }
 
 }
