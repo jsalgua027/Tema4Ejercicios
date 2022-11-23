@@ -9,7 +9,7 @@ package animales;
  * @author Windows10
  */
 public class Persona {
-    
+
     private String nombre;
     private int edad;
 
@@ -41,32 +41,30 @@ public class Persona {
     public String toString() {
         return "Persona{" + "nombre=" + nombre + ", edad=" + edad + '}';
     }
+
     //metodo llamar
-    public void llamar(Animal pet){
-    
-    pet.despertar();
+    public void llamar(Animal pet) {
+
+        pet.despertar();
     }
-    
+
     // metodo alimentar
-    
-    public void alimentar( Animal pet, double cantidadGramos){
-    
-    pet.comer(cantidadGramos);
-    
+    public void alimentar(Animal pet, double cantidadGramos) {
+
+        pet.comer(cantidadGramos);
+
     }
-    
+
     // metodo jugar
-    
-    public void jugar (Animal pet , int cantidadMinutos) throws IllegalArgumentException{
-        if (cantidadMinutos>180){
-            
-              pet.jugar(180);
-          throw new IllegalArgumentException("Has puesto demasiados minutos");
-      
-        }else{
-         pet.jugar(cantidadMinutos);
+    public void jugar(Animal pet, int cantidadMinutos) {
+
+        try {
+            pet.jugar(cantidadMinutos);
+
+        } catch (IllegalArgumentException iae) {
+            pet.jugar(180);
         }
-    
+
     }
-    
+
 }
