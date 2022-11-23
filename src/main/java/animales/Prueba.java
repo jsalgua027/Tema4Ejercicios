@@ -35,13 +35,22 @@ public class Prueba {
         System.out.println("El estado del animal a1: "+ a1.getEstado());
         System.out.println("El estado del animal a2: "+ a2.getEstado());
         
+         // Inicializo el objeto animal pero con el metodo hago el new
+        Animal a3 =Animal.clonar(a2);
         
-        Animal a3 = new Animal();
-        
-        a3.clonar(a2);
+       
         
         System.out.println(" Clono animal 2 en 3 imprimo 3 para ver resultados");
         System.out.println(a3);
+        System.out.println("P2 juega con a2 durante 120 minutos");
+        p2.jugar(a2, 120);
+        System.out.println("Como esta a2 de peso despues de jugar  "+ a2.getPeso());
+        
+        System.out.println("p1 alimenta a  a1 con 1000 gramos");
+        p1.alimentar(a1, 1000);
+        System.out.println("El peso de a1 es de: "+ a1.getPeso());
+        System.out.println("p1 debe de jugar con a1 200 minutos.");
+        p1.jugar(a1, 200);
         
         
     }

@@ -61,7 +61,7 @@ public class Persona {
         if (cantidadMinutos>180){
             
               pet.jugar(180);
-          throw new IllegalArgumentException();
+          throw new IllegalArgumentException("Has puesto demasiados minutos");
       
         }else{
          pet.jugar(cantidadMinutos);
