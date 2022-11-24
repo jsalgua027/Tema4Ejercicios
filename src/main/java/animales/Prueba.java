@@ -4,6 +4,8 @@
  */
 package animales;
 
+import animales.clases_enum.EstadoAnimal;
+import animales.clases_enum.TipoAnimal;
 import java.time.LocalDate;
 
 /**
@@ -20,8 +22,9 @@ public class Prueba {
      LocalDate fechaA2 = LocalDate.of(2020, 8, 10);
      
    
-        Animal a1 = new Animal(fechaA1, "Pluto", "Perro", 300, "dormido");
-        Animal a2 = new Animal(fechaA2, "Luna", "Gata", 200, "dormido");
+        Animal a1 = new Animal(fechaA1,"Pluto",TipoAnimal.GATO, 200, EstadoAnimal.JUGANDO);
+        Animal a2 = new Animal(fechaA2, "Duke", TipoAnimal.LAGARTO, 300, EstadoAnimal.JUGANDO);
+       
         
         Persona p1 = new Persona("Juan", 30);
         Persona p2 = new Persona("Maria", 20);

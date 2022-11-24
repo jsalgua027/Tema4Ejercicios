@@ -4,6 +4,7 @@
  */
 package animales;
 
+import animales.clases_enum.TipoAnimal;
 import java.time.LocalDate;
 
 /**
@@ -14,17 +15,17 @@ public class Animal {
 
     private LocalDate fechaNacimiento;
     private String nombre;
-    private String tipoAnima;
+    private TipoAnimal tipoAnima;
     private double peso;
     private String estado;
 
     public Animal() {
     }
 
-    public Animal(LocalDate fechaNacimiento, String nombre, String tipoAnima, double peso, String estado) {
+    public Animal(LocalDate fechaNacimiento, String nombre, TipoAnimal tipoAnimal,double peso, String estado) {
         this.fechaNacimiento = fechaNacimiento;
         this.nombre = nombre;
-        this.tipoAnima = tipoAnima;
+        this.tipoAnima = TipoAnimal.COBAYA;
         this.peso = peso;
         this.estado = estado;
     }
@@ -45,13 +46,15 @@ public class Animal {
         this.nombre = nombre;
     }
 
-    public String getTipoAnima() {
+    public TipoAnimal getTipoAnima() {
         return tipoAnima;
     }
 
-    public void setTipoAnima(String tipoAnima) {
+    public void setTipoAnima(TipoAnimal tipoAnima) {
         this.tipoAnima = tipoAnima;
     }
+
+  
 
     public double getPeso() {
         return peso;
@@ -79,6 +82,7 @@ public class Animal {
     public void comer(double cantidadGramos) {
         double aux = Math.abs(cantidadGramos);
         this.peso = this.getPeso() + aux;
+        this.estado="comiendo";
 
     }
 
