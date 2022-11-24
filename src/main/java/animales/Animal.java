@@ -4,6 +4,7 @@
  */
 package animales;
 
+import animales.clases_enum.EstadoAnimal;
 import animales.clases_enum.TipoAnimal;
 import java.time.LocalDate;
 
@@ -17,17 +18,17 @@ public class Animal {
     private String nombre;
     private TipoAnimal tipoAnima;
     private double peso;
-    private String estado;
+    private EstadoAnimal estado;
 
     public Animal() {
     }
 
-    public Animal(LocalDate fechaNacimiento, String nombre, TipoAnimal tipoAnimal,double peso, String estado) {
+    public Animal(LocalDate fechaNacimiento, String nombre, TipoAnimal tipoAnimal,double peso, EstadoAnimal estadoAnimal) {
         this.fechaNacimiento = fechaNacimiento;
         this.nombre = nombre;
-        this.tipoAnima = TipoAnimal.COBAYA;
+        this.tipoAnima = tipoAnimal;
         this.peso = peso;
-        this.estado = estado;
+        this.estado = estadoAnimal;
     }
 
     public LocalDate getFechaNacimiento() {
@@ -64,13 +65,15 @@ public class Animal {
         this.peso = peso;
     }
 
-    public String getEstado() {
+    public EstadoAnimal getEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
+    public void setEstado(EstadoAnimal estado) {
         this.estado = estado;
     }
+
+  
 
     @Override
     public String toString() {
@@ -82,22 +85,22 @@ public class Animal {
     public void comer(double cantidadGramos) {
         double aux = Math.abs(cantidadGramos);
         this.peso = this.getPeso() + aux;
-        this.estado="comiendo";
+       
 
     }
 
     public void dormir() {
-        this.estado = "Dormido";
+        this.estado = EstadoAnimal.DURMIENDO;
 
     }
 
     public void despertar() {
-        this.estado = "Despierto";
+        this.estado = EstadoAnimal.DESPIERTO;
 
     }
 
     public void descansar() {
-        this.estado = "Descansar";
+        this.estado =EstadoAnimal.DURMIENDO;
 
     }
     //metodo jugar
@@ -157,4 +160,7 @@ public class Animal {
         return aux;
     }
 
+   
+    
+    
 }
