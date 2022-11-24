@@ -24,6 +24,7 @@ public class Prueba {
    
         Animal a1 = new Animal(fechaA1,"Pluto",TipoAnimal.GATO, 200, EstadoAnimal.JUGANDO);
         Animal a2 = new Animal(fechaA2, "Duke", TipoAnimal.LAGARTO, 300, EstadoAnimal.JUGANDO);
+        Animal a5 =new Animal(LocalDate.of(2006, 03, 25), "Dama", TipoAnimal.PERRO, 450, EstadoAnimal.DESPIERTO);
        
         
         Persona p1 = new Persona("Juan", 30);

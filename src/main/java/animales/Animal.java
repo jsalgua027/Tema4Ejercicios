@@ -23,7 +23,7 @@ public class Animal {
     public Animal() {
     }
 
-    public Animal(LocalDate fechaNacimiento, String nombre, TipoAnimal tipoAnimal,double peso, EstadoAnimal estadoAnimal) {
+    public Animal(LocalDate fechaNacimiento, String nombre, TipoAnimal tipoAnimal, double peso, EstadoAnimal estadoAnimal) {
         this.fechaNacimiento = fechaNacimiento;
         this.nombre = nombre;
         this.tipoAnima = tipoAnimal;
@@ -55,8 +55,6 @@ public class Animal {
         this.tipoAnima = tipoAnima;
     }
 
-  
-
     public double getPeso() {
         return peso;
     }
@@ -73,8 +71,6 @@ public class Animal {
         this.estado = estado;
     }
 
-  
-
     @Override
     public String toString() {
         return "Animal{" + "fechaNacimiento=" + fechaNacimiento
@@ -85,7 +81,6 @@ public class Animal {
     public void comer(double cantidadGramos) {
         double aux = Math.abs(cantidadGramos);
         this.peso = this.getPeso() + aux;
-       
 
     }
 
@@ -100,14 +95,14 @@ public class Animal {
     }
 
     public void descansar() {
-        this.estado =EstadoAnimal.DURMIENDO;
+        this.estado = EstadoAnimal.DURMIENDO;
 
     }
     //metodo jugar
 
     public void jugar(int cantidadMinutos) {
         int minutos = Math.abs(cantidadMinutos);
-        int cantidadGramosPerdidos = 0;
+
         if (minutos < 30) {
             this.peso = this.peso - 10;
 
@@ -160,7 +155,4 @@ public class Animal {
         return aux;
     }
 
-   
-    
-    
 }
