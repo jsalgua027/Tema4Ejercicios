@@ -4,6 +4,8 @@
  */
 package serie;
 
+import java.util.Objects;
+
 /**
  *
  * @author nacho
@@ -124,6 +126,44 @@ public class Serie {
   this.numeroLikes++;
   
   }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 43 * hash + Objects.hashCode(this.titulo);
+        hash = 43 * hash + Objects.hashCode(this.genero);
+        hash = 43 * hash + Objects.hashCode(this.sipnosis);
+        hash = 43 * hash + Objects.hashCode(this.productor);
+        hash = 43 * hash + this.numeroTemporadas;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Serie other = (Serie) obj;
+        if (this.numeroTemporadas != other.numeroTemporadas) {
+            return false;
+        }
+        if (!Objects.equals(this.titulo, other.titulo)) {
+            return false;
+        }
+        if (!Objects.equals(this.genero, other.genero)) {
+            return false;
+        }
+        if (!Objects.equals(this.sipnosis, other.sipnosis)) {
+            return false;
+        }
+        return Objects.equals(this.productor, other.productor);
+    }
   
   
     

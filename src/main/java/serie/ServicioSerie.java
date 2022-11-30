@@ -59,6 +59,14 @@ public class ServicioSerie {
     
     }
     
+    public static Serie copiar(Serie origen){
+    
+    Serie aux =new Serie(origen.getTitulo(), origen.getGenero(), origen.getSipnosis(), 
+            origen.getProductor(), origen.getNumeroTemporadas(),origen.getNumeroLikes());
+    
+    return aux;
+    
+    }
     
     
 }

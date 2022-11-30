@@ -19,6 +19,7 @@ public class MisSeries {
         System.out.println(simpson);
         
         Serie house = new Serie();
+        Serie OtroSimpson= ServicioSerie.copiar(simpson);
         
         System.out.println(house);
         
@@ -33,14 +34,21 @@ public class MisSeries {
         
       //  System.out.println(peakBlinders);
         
-        ServicioSerie.darLike(prisionBreak);
+       // ServicioSerie.darLike(prisionBreak);
       //  ServicioSerie.darLike(peakBlinders);
         
         
       //  System.out.println(peakBlinders);
         System.out.println(prisionBreak);
         
-      
+        System.out.println("Son iguales simpson y house? "+ simpson.equals(house));
+        
+         System.out.println("Son iguales simpson y otroSimposn? "+ simpson.equals(OtroSimpson));
+         
+         System.out.println("El Hashcode simpson " + simpson.hashCode());
+         System.out.println("El Hashcode Otrosimpsomn " + OtroSimpson.hashCode());
+         System.out.println("El Hashcode prisionBreak " + prisionBreak.hashCode());
+         
       
     }
     
