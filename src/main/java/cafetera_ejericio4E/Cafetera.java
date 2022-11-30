@@ -101,6 +101,7 @@ public class Cafetera {
     public void agregarCafe(double cantidadAgregar) {
         if (cantidadAgregar + this.cantidadActual > this.capacidadMaxima) { //si se supera la cantidad maxima solo lo lleno hasta la maxima
             this.cantidadActual = this.capacidadMaxima;
+            System.out.println("Quieres llenar mas de lo que puede, lo llenas a la capazidad maxima nada mas");
 
         } else {//sino pues la cantidad actal es la suma de la canitdad agragada con la que habia
             this.cantidadActual = this.cantidadActual + cantidadAgregar;
