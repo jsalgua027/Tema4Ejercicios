@@ -21,7 +21,7 @@ public class PruebaCafe {
        
        // cafetera vacia 
          Cafetera cafetera3 = new Cafetera(4000, 0);
-         Cafetera cafetera4= new Cafetera();
+         
          
          // Persona 
          
@@ -33,24 +33,30 @@ public class PruebaCafe {
          System.out.println("La cafetera3 como esta actualmente: "+ cafetera3.getCantidadActual());
          p1.hacerCafe(cafetera3);
          System.out.println("Como esta cafetera 3 actualmente: " + cafetera3.getCantidadActual());
+          System.out.println("");
          System.out.println("Voy a usar cafetera 3 para servir una taza atraves de la persona");
          p1.beberCafe(cafetera3, 2000);
          System.out.println("La cafetera 3 despues de servir el cafe tiene: " +cafetera3.getCantidadActual());
-         
+         System.out.println("");
          
          System.out.println("********************pruebo los metodos de la clase cafetera ********");
          System.out.println("La cafetera 1 esta asi: "+ cafetera1.toString());
-         System.out.println("a cafetera 1 le voy a agregar cafe, le"
+          System.out.println("");
+         System.out.println("A cafetera 1 le voy a agregar cafe, le"
                  + " voy a dar mas cantidad de la cantidad maxima, solo se llenara a la maxima");
          cafetera1.agregarCafe(3000);
          System.out.println("despues de agregarle 3000 su cantidad actual es: " +cafetera1.getCantidadActual());
-         
+          System.out.println("");
          
          System.out.println("Voy hacer una copia de la cafetera 2 y uso el metodo equals");
-         cafetera4.copia(cafetera2);
+         System.out.println("la cafetera 2 es: "+ cafetera2);
+         Cafetera cafetera4= new Cafetera().copia(cafetera2);
          System.out.println("la cafetera cuatro es: " + cafetera4);
-         
+          System.out.println("");
          System.out.println("Son iguales las cafetera 2 y la 4:"  + cafetera2.equals(cafetera4));
+         
+         System.out.println("El codigo hashCode de cafetera 2 es: " + cafetera2.hashCode());
+         System.out.println("El codigo hashCode de cafetera 4 es: " + cafetera4.hashCode());
          
          
          

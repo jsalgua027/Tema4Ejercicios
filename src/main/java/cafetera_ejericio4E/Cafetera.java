@@ -34,6 +34,8 @@ public class Cafetera {
     private double capacidadMaxima; //capaciad máxima que puede contener la cafetera
     private double cantidadActual;
 
+    
+    
     public Cafetera() {
         this.capacidadMaxima = 1000;
         this.cantidadActual = 0;

@@ -4,7 +4,7 @@
  */
 package cafetera_ejericio4E;
 
-import animales.*;
+
 import java.util.Objects;
 
 /**
