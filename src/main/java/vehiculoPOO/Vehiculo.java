@@ -4,6 +4,7 @@
  */
 package vehiculoPOO;
 
+import java.util.Objects;
 import java.util.Vector;
 
 /**
@@ -224,4 +225,40 @@ public class Vehiculo {
                 + ", tarifa=" + tarifa + ", disponible=" + disponible + '}';
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 29 * hash + Objects.hashCode(this.matricula);
+        hash = 29 * hash + Objects.hashCode(this.marca);
+        hash = 29 * hash + Objects.hashCode(this.modelo);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Vehiculo other = (Vehiculo) obj;
+        if (!Objects.equals(this.matricula, other.matricula)) {
+            return false;
+        }
+        if (!Objects.equals(this.marca, other.marca)) {
+            return false;
+        }
+        return Objects.equals(this.modelo, other.modelo);
+    }
+
+    
+    
+    
+    
+    
+    
 }
