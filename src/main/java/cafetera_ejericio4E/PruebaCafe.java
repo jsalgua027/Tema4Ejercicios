@@ -58,6 +58,10 @@ public class PruebaCafe {
          System.out.println("El codigo hashCode de cafetera 2 es: " + cafetera2.hashCode());
          System.out.println("El codigo hashCode de cafetera 4 es: " + cafetera4.hashCode());
          
+         // USAMOS LA PERSONA RECORD
+         PersonaRecord personaR= new PersonaRecord("MARIA RECORD", 22);
+         
+         personaR.hacerCafe(cafetera4);
          
          
     }

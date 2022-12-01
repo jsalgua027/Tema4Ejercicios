@@ -86,7 +86,7 @@ public class Cafetera {
     //servirTaza(double cantidadAServir): simula la acción de servir una taza con la capacidad indicada. Si la cantidad actual de café “no alcanza” para llenar la taza, se sirve lo que quede.
     public void servirTaza(double cantidadAservir) {
         if (cantidadAservir > this.cantidadActual) {
-            this.cantidadActual = this.cantidadActual - this.cantidadActual;
+            this.cantidadActual = 0;
          
         } else {
 
